@@ -1,0 +1,56 @@
+site_name: AI Knowledge Hub
+site_description: AI出力・ナレッジ蓄積ブログ
+site_author: Your Name
+
+theme:
+  name: material
+  language: ja
+  palette:
+    # ライトモード / ダークモード切り替え
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+  features:
+    - navigation.top            # トップへ戻るボタン
+    - navigation.instant        # 高速ページ遷移
+    - search.suggest            # 検索サジェスト
+    - search.highlight          # 検索結果のハイライト
+    - content.code.copy         # コードのワンクリックコピー
+    - content.action.edit       # 編集リンク（任意）
+
+plugins:
+  - search:
+      lang:
+        - ja
+        - en
+  - roamlinks                   # Obsidianの [[記事名]] 形式リンクを自動変換
+
+markdown_extensions:
+  - tables                      # 表のサポート
+  - admonition                  # コールアウト / メモボックス
+  - pymdownx.details            # 折りたたみブロック
+  - pymdownx.superfences        # ネスト可能なコードブロック
+  - pymdownx.highlight:         # シンタックスハイライト
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:          # タスクリスト [ ] [x]
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+nav:
+  - HOME: index.md
